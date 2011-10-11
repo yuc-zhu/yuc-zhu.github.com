@@ -9,7 +9,7 @@
   <meta name="author" content="yuc-zhu">
 
   
-  <meta name="description" content="">
+  <meta name="description" content="    if original_width &gt; original_height        target_width = requested_width        scale_factor = target_width.to_f / original_width.to_f     ...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +88,24 @@
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><div><script src='https://gist.github.com/6439.js?file='></script>
+<noscript><pre><code>    if original_width &gt; original_height
+        target_width = requested_width
+        scale_factor = target_width.to_f / original_width.to_f
+        new_height = (scale_factor * original_height)
+        target_height = new_height &gt; requested_height ? new_height.to_i : new_height.round
+    elsif original_height &gt; original_width
+        target_height = requested_height;
+        scale_factor = target_height.to_f / original_height.to_f
+        new_width = (scale_factor * original_width)
+        target_width = new_width &gt; requested_width ? new_width.to_i : new_width.round
+    else
+        target_width = [requested_width, requested_height].min
+        target_height = target_width
+    end</code></pre></noscript></div>
+
+
+
 </div>
 
 

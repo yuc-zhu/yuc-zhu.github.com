@@ -4,7 +4,7 @@
   <title><![CDATA[Yuc Zhu' Blog]]></title>
   <link href="http://yuc-zhu.github.com/atom.xml" rel="self"/>
   <link href="http://yuc-zhu.github.com/"/>
-  <updated>2011-10-11T23:57:26+08:00</updated>
+  <updated>2011-10-12T00:04:31+08:00</updated>
   <id>http://yuc-zhu.github.com/</id>
   <author>
     <name><![CDATA[yuc-zhu]]></name>
@@ -18,7 +18,24 @@
     <link href="http://yuc-zhu.github.com/blog/2011/10/10/test-octopressde-bu-shu/"/>
     <updated>2011-10-10T20:23:00+08:00</updated>
     <id>http://yuc-zhu.github.com/blog/2011/10/10/test-octopressde-bu-shu</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/6439.js?file='></script>
+<noscript><pre><code>    if original_width &gt; original_height
+        target_width = requested_width
+        scale_factor = target_width.to_f / original_width.to_f
+        new_height = (scale_factor * original_height)
+        target_height = new_height &gt; requested_height ? new_height.to_i : new_height.round
+    elsif original_height &gt; original_width
+        target_height = requested_height;
+        scale_factor = target_height.to_f / original_height.to_f
+        new_width = (scale_factor * original_width)
+        target_width = new_width &gt; requested_width ? new_width.to_i : new_width.round
+    else
+        target_width = [requested_width, requested_height].min
+        target_height = target_width
+    end</code></pre></noscript></div>
+
+
+
 ]]></content>
   </entry>
   
